@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fullpage {
+    width: 50%;
+}
+.section {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; 
+}
+.section:not(.header-section) {
+    height: 55vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.header-section {
+    height: 7vh; /* Увеличиваем высоту секции */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.header-section img {
+    width: 110%;
+    height: auto; /* Устанавливаем высоту авто для сохранения пропорций */
+    object-fit: cover; /* Растягиваем изображение, сохраняя пропорции */
+    object-position: center; /* Центрируем изображение */
+}
+.background-section {
+    background-image: url('/images/depositphotos_91822764-stock-photo-sportsman-swims-in-a-swimming.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+}
+/* .background-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* здесь можно настроить уровень затемнения */
+/* } */ 
+.background-section img {
+    position: relative;
+    z-index: 1; /* Чтобы изображение находилось над затемнением */
+    filter: brightness(0.5); /* Применяем затемнение к изображению */
+}
+.background-section .content {
+    color: white; /* Устанавливаем белый цвет текста */
+}
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+.section.black-background {
+    background-color: black;
+    position: relative; 
+    
+}
+.section.black-background .background-image {
+    position: absolute; /* Устанавливаем абсолютную позицию для изображения */
+    bottom: 0; /* Размещаем изображение внизу секции */
+    width: 100%; /* Устанавливаем ширину изображения на всю ширину секции */
+    /* z-index: -1; Устанавливаем изображение за текстом */
+}
+
+
+.section.black-background .content {
+    color: white;
+    z-index: 1; /* Устанавливаем текст над изображением */
+}
+.subscription-section {
+    background-color: black; /* Устанавливаем черный фон */
+    position: relative; /* Устанавливаем позицию относительно */
+    overflow: hidden; /* Обрезаем изображение, чтобы оно не выходило за границы секции */
+}
+
+.subscription-section .background-image {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; /* Устанавливаем ширину фото на всю ширину секции */
+    height: 100%; /* Устанавливаем высоту фото на всю высоту секции */
+    object-fit: cover; 
+    filter: brightness(0.5); 
+    z-index: -1; 
+}
+
+.subscription-section .content {
+    position: relative; /* Устанавливаем позицию относительно */
+    z-index: 1; 
+    height: 80%; /* Уменьшаем высоту контейнера */
+    color: white; /* Устанавливаем белый цвет текста */
+}
+.gifts-section {
+    position: relative;
+    background-color: black;
+    color: white;
+    overflow: hidden; /* Обрезаем изображение, чтобы оно не выходило за границы секции */
+}
+
+.gifts-section .background-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Переместите фон под контент */
+    filter: brightness(0.5); /* Примените затемнение к фону */
+}
+
+.gifts-section .content {
+    padding: 20px;
+    bottom: 110;
+    /* margin-bottom:50%; */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+}
+
+.subscription-offer {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.subscription-offer .content {
+    padding: 20px;
+}
+/* .column-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */
+.main-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+    margin-bottom: 25px;
+ 
+}
+.left-column,
+.right-column {
+    /* display: flex; */
+    flex-direction: column;
+}
+.column {
+    flex: 1;
+
+        margin-bottom: 25px; /* Добавляем отступ снизу для разделения колонок */
+    
+}
+.column.full-width {
+    flex: 3;
+}
+.subscription-offer p {
+    font-size: 14px;
+    
+}
+.subscription-offer h1 {
+    margin-top: 22%;
+    font-size: 20px;
+    margin-bottom: 20%; /* Уменьшаем размер заголовка */
+}
+.green-button {
+    background-color: #98FB98; /* Салатовый цвет */
+    color: white;
+    border: none;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 10px;
+    display: inline-block; /* Чтобы кнопка не занимала всю ширину */
+    margin: 20px auto; /* Центрируем кнопку */
+}
+
+.green-button:hover {
+    background-color: #7ECF7E; /* Темно-салатовый цвет при наведении */
+}
